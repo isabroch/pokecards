@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="generator.css">
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="script.js"></script>
-  <script src="generate.js" charset="utf-8"></script>
+  <script type="text/javascript"  src="generate.js"></script>
 </head>
 
 <!-- the form -->
@@ -12,15 +12,16 @@
   <input type="text" value="species" id="species">
   <select name="gender" id="gender"></select>
   <input type="text" value="level" id="level">
+  <div id="storage"><p>In PC?</p><input type="checkbox" name="stored" value="stored" id="stored"></div>
 
   <select name="ball" id="ball"></select>
   <select name="item" id="item"></select>
 
   <select name="type1" id="type1" class="type">
-    <option value="" disabled selected>Pokemon type</option>
+    <option value="None" disabled selected>Pokemon type 1</option>
   </select>
   <select name="type2" id="type2" class="type">
-    <option value="" disabled selected>Pokemon type</option>
+    <option value="None" disabled selected>Pokemon type 2</option>
     <option value="None">None</option>
   </select>
   <input type="text" value="ability" id="ability">
@@ -43,6 +44,7 @@
   <textarea name="description" id="description">Description</textarea>
 </form>
 <div class="submit">
+  <!-- <button onclick="submitForm()" id="button">Submit!</button> -->
   <button onclick="submitForm()" id="button">Submit!</button>
 </div>
 

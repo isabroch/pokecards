@@ -1,8 +1,5 @@
 #izzyPokemonPC {
-  .Psychic { background: #F85888; }	.Poison { background: #A040A0; }	.Bug { background: #A8B820; }	.Dark { background: #705848; }	.Dragon { background: #7038F8; }	.Electric { background: #F8D030; }	.Fairy { background: #EE99AC; }	.Fighting { background: #C03028; }	.Fire { background: #F08030; }	.Flying { background: #A890F0; }	.Ghost { background: #705898; }	.Grass { background: #78C850; }	.Ground { background: #E0C068; }	.Ice { background: #98D8D8; }	.Normal { background: #A8A878; }	.Rock { background: #B8A038; }	.Steel { background: #B8B8D0; }	.Water { background: #6890F0; }
-
   --fullCard: span 3;
-
   max-width: 658px;
   width: 100%;
   display: grid;
@@ -18,7 +15,7 @@
   pokeslot {
     --color: rgba(189,189,189,.49);
     width: 100%;
-    padding: 6px 10px 10px 10px;
+    padding: 6px 10px 10px;
     border-radius: 5px;
     position: relative;
 
@@ -54,8 +51,8 @@
       border-radius: 100%;
       background: white;
       position: absolute;
-
     }
+
     .hideMe {
       display: none;
     }
@@ -137,9 +134,80 @@
     .pokeAbility {}
 
     a.pokeMove {
-      --type { background: #bbb; };
-      background-color: var(--type);
+      background-color: #bbb;
       color: white;
+
+      &.Psychic {
+        background: #F85888;
+      }
+
+      &.Poison {
+        background: #A040A0;
+      }
+
+      &.Bug {
+        background: #A8B820;
+      }
+
+      &.Dark {
+        background: #705848;
+      }
+
+      &.Dragon {
+        background: #7038F8;
+      }
+
+      &.Electric {
+        background: #F8D030;
+      }
+
+      &.Fairy {
+        background: #EE99AC;
+      }
+
+      &.Fighting {
+        background: #C03028;
+      }
+
+      &.Fire {
+        background: #F08030;
+      }
+
+      &.Flying {
+        background: #A890F0;
+      }
+
+      &.Ghost {
+        background: #705898;
+      }
+
+      &.Grass {
+        background: #78C850;
+      }
+
+      &.Ground {
+        background: #E0C068;
+      }
+
+      &.Ice {
+        background: #98D8D8;
+      }
+
+      &.Normal {
+        background: #A8A878;
+      }
+
+      &.Rock {
+        background: #B8A038;
+      }
+
+      &.Steel {
+        background: #B8B8D0;
+      }
+
+      &.Water {
+        background: #6890F0;
+      }
     }
   }
 
@@ -151,6 +219,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     padding: 8px;
+    white-space: pre-line;
   }
 
   .stored {

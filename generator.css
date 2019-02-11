@@ -14,8 +14,8 @@ form {
   grid-gap: 5px;
   grid-auto-rows: minmax(1em, min-content);
   grid-template-areas:
-    "name name name name name name link"
-    "species species species species species gender level"
+    "name name name name name link storage"
+    "species species species species gender level storage"
     "ball ball ball item item item ."
     ". . . . . . ."
     "type1 type1 type1 ability ability ability ability"
@@ -110,6 +110,16 @@ form * {
 
 #description {
   grid-area: description;
+}
+
+#storage {
+  grid-area: storage;
+  text-align: center;
+  align-self: center;
+}
+
+#storage p {
+  margin: 0;
 }
 
 .submit {

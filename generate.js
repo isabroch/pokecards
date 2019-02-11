@@ -35,15 +35,18 @@ function ifNoneType() {
   if (document.getElementById("type2").value == "None") {
     return ':' + document.getElementById("type1").value.toLowerCase() + ':';
   } else {
-    return ':' + document.getElementById("type1").value.toLowerCase() + '::' + document.getElementById("type2").value.toLowerCase() + ':';
+    return ':' + document.getElementById("type1").value.toLowerCase() + ': :' + document.getElementById("type2").value.toLowerCase() + ':';
   }
 }
 
-function hideEmpty(inputValue, matchValue) {
+function hideEmpty(inputValue, matchValue, className, newValue) {
   if (inputValue == matchValue) {
-    return "hideMe";
-  };
+    return className;
+  } else {
+    return newValue;
+  }
 }
+
 
 function submitForm() {
   var types = ifNoneType();
@@ -59,9 +62,9 @@ function submitForm() {
   var moveType4 = document.getElementById("moveType4").value;
 
   var ball = document.getElementById("ball").value;
-  var ballHidden = hideEmpty(ball, "No Ball");
+  var ballHidden = hideEmpty(ball, "No Ball", "hideMe");
   var item = document.getElementById("item").value;
-  var itemHidden = hideEmpty(item, "No Item");
+  var itemHidden = hideEmpty(item, "No Item", "hideMe");
 
   var name = document.getElementById("name").value;
   var species = document.getElementById("species").value;
@@ -71,24 +74,25 @@ function submitForm() {
 
   var description = document.getElementById("description").value;
 
+  var storing = document.getElementById("stored").checked;
+  var storedAway = hideEmpty(storing, true, "stored", " ");
 
-  var code = `<div id="izzyPokemonPC">
-<pokeSlot>
+  var code = `<pokeSlot class="`+ storedAway +`">
 <pokeSprites>
 <pokeImg><img src="https://play.pokemonshowdown.com/sprites/xyani/` + species.toLowerCase() + `.gif" alt="` + species + `" title="` + species + `"></pokeImg>
-<pokeBall class="`+ballHidden+`"><img src="http://pokemonpledge.b1.jcink.com/uploads/pokemonpledge/Shop_Icons/Pokeballs/` + ball.toLowerCase().replace(/ /g, "") + `.png" alt="` + ball + `" title="` + ball + `"></pokeBall>
-<pokeItem  class="`+ballHidden+`"><img src="http://pokemonpledge.b1.jcink.com/uploads/pokemonpledge/Shop_Icons/Held_Items/` + item.toLowerCase().replace(/ /g, "_") + `.png" alt="` + item + `" title="` + item + `"></pokeItem>
+<pokeBall class="` + ballHidden + `"><img src="http://pokemonpledge.b1.jcink.com/uploads/pokemonpledge/Shop_Icons/Pokeballs/` + ball.toLowerCase().replace(/ /g, "") + `.png" alt="` + ball + `" title="` + ball + `"></pokeBall>
+<pokeItem  class="` + ballHidden + `"><img src="http://pokemonpledge.b1.jcink.com/uploads/pokemonpledge/Shop_Icons/Held_Items/` + item.toLowerCase().replace(/ /g, "_") + `.png" alt="` + item + `" title="` + item + `"></pokeItem>
 </pokeSprites>
 
 <pokeInfo>
 <pokeName><span>` + name + `</span></pokeName>
-<pokeSub><span>LVL. ` + lvl + ` - ` + gender + ` - ` + species + `</span></pokeSub>
-<pokeLink><span>Link ` + link + `</span></pokeLink>
+<pokeSub><span>` + gender + ` - ` + species + `</span></pokeSub>
+<pokeLink><span>LVL. ` + lvl + ` Link ` + link + `</span></pokeLink>
 </pokeInfo>
 
 <div class="hiddenInfo">
 <pokeStats>
-<pokeType>` + types + `</pokeType>
+<pokeType> ` + types + `</pokeType>
 <a href="https://bulbapedia.bulbagarden.net/wiki/` + ability + `_(Ability)" class="pokeAbility">` + ability + `</a>
 <a href="https://bulbapedia.bulbagarden.net/wiki/` + move1 + `_(move)" class="pokeMove ` + moveType1 + `">` + move1 + `</a>
 <a href="https://bulbapedia.bulbagarden.net/wiki/` + move2 + `_(move)" class="pokeMove ` + moveType2 + `">` + move2 + `</a>
@@ -98,8 +102,7 @@ function submitForm() {
 
 <pokeDescription>` + description + `</pokeDescription>
 </div>
-</pokeSlot>
-</div>`;
+</pokeSlot>`;
 
 
   console.log('Creating card for ' + name + ' the ' + species + '!');
@@ -107,7 +110,7 @@ function submitForm() {
   var preview = document.getElementById("insertStuff");
   var output = document.getElementById("outputty");
 
-  preview.innerHTML = code;
+  preview.innerHTML = "<div id='izzyPokemonPC'>"+code+"</div>";
 
-  output.innerHTML = preview.innerHTML;
+  output.innerHTML = code;
 }

@@ -9,78 +9,6 @@
 	grid-auto-rows: 110px;
 }
 
-#izzyPokemonPC .Psychic {
-	background: #F85888;
-}
-
-#izzyPokemonPC .Poison {
-	background: #A040A0;
-}
-
-#izzyPokemonPC .Bug {
-	background: #A8B820;
-}
-
-#izzyPokemonPC .Dark {
-	background: #705848;
-}
-
-#izzyPokemonPC .Dragon {
-	background: #7038F8;
-}
-
-#izzyPokemonPC .Electric {
-	background: #F8D030;
-}
-
-#izzyPokemonPC .Fairy {
-	background: #EE99AC;
-}
-
-#izzyPokemonPC .Fighting {
-	background: #C03028;
-}
-
-#izzyPokemonPC .Fire {
-	background: #F08030;
-}
-
-#izzyPokemonPC .Flying {
-	background: #A890F0;
-}
-
-#izzyPokemonPC .Ghost {
-	background: #705898;
-}
-
-#izzyPokemonPC .Grass {
-	background: #78C850;
-}
-
-#izzyPokemonPC .Ground {
-	background: #E0C068;
-}
-
-#izzyPokemonPC .Ice {
-	background: #98D8D8;
-}
-
-#izzyPokemonPC .Normal {
-	background: #A8A878;
-}
-
-#izzyPokemonPC .Rock {
-	background: #B8A038;
-}
-
-#izzyPokemonPC .Steel {
-	background: #B8B8D0;
-}
-
-#izzyPokemonPC .Water {
-	background: #6890F0;
-}
-
 #izzyPokemonPC * {
 	box-sizing: border-box;
 }
@@ -88,7 +16,7 @@
 #izzyPokemonPC pokeslot {
 	--color: rgba(189,189,189,.49);
 	width: 100%;
-	padding: 6px 10px 10px 10px;
+	padding: 6px 10px 10px;
 	border-radius: 5px;
 	position: relative;
 }
@@ -204,12 +132,80 @@
 }
 
 #izzyPokemonPC pokestats a.pokeMove {
-	background-color: var(--type);
+	background-color: #bbb;
 	color: white;
 }
 
-#izzyPokemonPC pokestats a.pokeMove --type {
-	background: #bbb;
+#izzyPokemonPC pokestats a.pokeMove.Psychic {
+	background: #F85888;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Poison {
+	background: #A040A0;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Bug {
+	background: #A8B820;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Dark {
+	background: #705848;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Dragon {
+	background: #7038F8;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Electric {
+	background: #F8D030;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Fairy {
+	background: #EE99AC;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Fighting {
+	background: #C03028;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Fire {
+	background: #F08030;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Flying {
+	background: #A890F0;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Ghost {
+	background: #705898;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Grass {
+	background: #78C850;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Ground {
+	background: #E0C068;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Ice {
+	background: #98D8D8;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Normal {
+	background: #A8A878;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Rock {
+	background: #B8A038;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Steel {
+	background: #B8B8D0;
+}
+
+#izzyPokemonPC pokestats a.pokeMove.Water {
+	background: #6890F0;
 }
 
 #izzyPokemonPC pokedescription {
@@ -220,6 +216,7 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 	padding: 8px;
+	white-space: pre-line;
 }
 
 #izzyPokemonPC .stored {
