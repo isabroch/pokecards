@@ -1,32 +1,52 @@
-<link rel="stylesheet" href="style.min.css">
-<script type="text/javascript" src="script.js"></script>
+<head>
+  <link rel="stylesheet" href="generator.css">
+  <link rel="stylesheet" href="https://combinatronics.com/isabroch/pokecards/master/style.css">
+  <script type="text/javascript" src="https://combinatronics.com/isabroch/pokecards/master/script.js"></script>
+  <script src="generate.js" charset="utf-8"></script>
+</head>
 
-<div id="izzyPokemonPC">
-  <pokeSlot>
-    <pokeSprites>
-      <pokeImg><img src="https://play.pokemonshowdown.com/sprites/xyani/eevee.gif" alt="Pokemon" title="Pokemon"></pokeImg>
-      <pokeBall><img src="http://pokemonpledge.b1.jcink.com/uploads/pokemonpledge/Shop_Icons/Pokeballs/pokeball.png" alt="Ball" title="Ball"></pokeBall>
-      <pokeItem><img src="http://pokemonpledge.b1.jcink.com/uploads/pokemonpledge/Shop_Icons/Pokeballs/pokeball.png" alt="Item" title="Item"></pokeItem>
-    </pokeSprites>
+<!-- the form -->
+<form>
+  <input type="text" value="name" id="name">
+  <input type="text" value="link %" id="link">
+  <input type="text" value="species" id="species">
+  <select name="gender" id="gender"></select>
+  <input type="text" value="level" id="level">
 
-    <pokeInfo>
-      <pokeName><span>Nickname Here</span></pokeName>
-      <pokeSub><span>LVL. 8 - GEN - Species</span></pokeSub>
-      <pokeLink><span>Link 80%</span></pokeLink>
-    </pokeInfo>
+  <select name="ball" id="ball"></select>
+  <select name="item" id="item"></select>
 
-<div class="hiddenInfo">
-  <pokeStats>
-    <pokeType>:type1: :type2:</pokeType>
-    <a href="" class="pokeAbility">Ability</a>
-    <a href="" class="pokeMove">Move</a>
-    <a href="" class="pokeMove">Move</a>
-    <a href="" class="pokeMove">Move</a>
-    <a href="" class="pokeMove">Move</a>
-  </pokeStats>
-
-  <pokeDescription>Text about pokemon here I guess</pokeDescription>
+  <select name="type1" id="type1" class="type">
+    <option value="" disabled selected>Pokemon type</option>
+  </select>
+  <select name="type2" id="type2" class="type">
+    <option value="" disabled selected>Pokemon type</option>
+    <option value="None">None</option>
+  </select>
+  <input type="text" value="ability" id="ability">
+  <input type="text" value="move1" id="move1">
+  <select name="moveType1" id="moveType1" class="type">
+    <option value="" disabled selected>Move type</option>
+  </select>
+  <input type="text" value="move2" id="move2">
+  <select name="moveType2" id="moveType2" class="type">
+    <option value="" disabled selected>Move type</option>
+  </select>
+  <input type="text" value="move3" id="move3">
+  <select name="moveType3" id="moveType3" class="type">
+    <option value="" disabled selected>Move type</option>
+  </select>
+  <input type="text" value="move4" id="move4">
+  <select name="moveType4" id="moveType4" class="type">
+    <option value="" disabled selected>Move type</option>
+  </select>
+  <textarea name="description" id="description">Description</textarea>
+</form>
+<div class="submit">
+  <button onclick="submitForm()" id="button">Submit!</button>
 </div>
-  </pokeSlot>
 
-</div>
+<!-- outputs from the form above -->
+<hr>
+<div id="insertStuff"></div>
+<textarea name="Output" id="outputty" readonly></textarea>

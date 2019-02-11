@@ -1,0 +1,129 @@
+body {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+#insertStuff,
+#outputty {
+  margin-top: 20px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+  grid-auto-rows: minmax(1em, min-content);
+  grid-template-areas:
+    "name name name name name name link"
+    "species species species species species gender level"
+    "ball ball ball item item item ."
+    ". . . . . . ."
+    "type1 type1 type1 ability ability ability ability"
+    "type2 type2 type2 move1 move1 moveType1 moveType1"
+    ". . . move2 move2 moveType2 moveType2"
+    ". . . move3 move3 moveType3 moveType3"
+    ". . . move4 move4 moveType4 moveType4"
+    ". . . . . . ."
+    "description description description description description description description"
+    ". button button button button button .";
+
+    margin-bottom: 0;
+}
+
+form * {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+}
+
+#name {
+  grid-area: name;
+}
+
+#gender {
+  grid-area: gender;
+}
+
+#level {
+  grid-area: level;
+}
+
+#species {
+  grid-area: species;
+}
+
+#link {
+  grid-area: link;
+}
+
+#ball {
+  grid-area: ball;
+}
+
+#item {
+  grid-area: item;
+}
+
+#type1 {
+  grid-area: type1;
+}
+
+#type2 {
+  grid-area: type2;
+}
+
+#ability {
+  grid-area: ability;
+}
+
+#move1 {
+  grid-area: move1;
+}
+
+#moveType1 {
+  grid-area: moveType1;
+}
+
+#move2 {
+  grid-area: move2;
+}
+
+#moveType2 {
+  grid-area: moveType2;
+}
+
+#move3 {
+  grid-area: move3;
+}
+
+#moveType3 {
+  grid-area: moveType3;
+}
+
+#move4 {
+  grid-area: move4;
+}
+
+#moveType4 {
+  grid-area: moveType4;
+}
+
+#description {
+  grid-area: description;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+#button {
+  padding: 5px;
+  width: 80%;
+}
+
+#description, #outputty {
+  width: 100%;
+  min-height: 150px;
+}
