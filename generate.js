@@ -90,7 +90,7 @@ function submitForm() {
 <pokeInfo>
 <pokeName><span>` + name + `</span></pokeName>
 <pokeSub><span>` + gender + ` - ` + species + `</span></pokeSub>
-<pokeLink><span>LVL` + lvl + ` Link ` + link + `</span></pokeLink>
+<pokeLink><span>LVL` + lvl + ` - Link ` + link + `</span></pokeLink>
 </pokeInfo>
 
 <div class="hiddenInfo">
