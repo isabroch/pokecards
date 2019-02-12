@@ -1,37 +1,50 @@
 // console.log("It works!")
 //
 // function toggle(element) {
-//   var stored = document.querySelectorAll('.stored');
+//   var varType = document.querySelectorAll('.varType');
 //
-//   for (i = 0; i < stored.length; i++) {
+//   for (i = 0; i < varType.length; i++) {
 //
-//     if (stored[i] == element) {
-//       stored[i].classList.toggle('stored');
+//     if (varType[i] == element) {
+//       varType[i].classList.toggle('varType');
 //     } else {
-//       stored[i].classList.remove('stored');
+//       varType[i].classList.remove('varType');
 //     }
 //   }
 // }
 
+function toggle(element, varType) {
+  for (a = 0; a < varType.length; a++) {
 
-document.addEventListener('DOMContentLoaded', function(event) {
-  console.log("It works!");
-  var stored = document.querySelectorAll('.stored');
-
-for (i = 0; i < stored.length; i++) {
-  stored[i].addEventListener('click', function onclick(event) {
-    console.log("Clicky!");
-    toggle(this);
-  });}
-
-  function toggle(element) {
-    for (i = 0; i < stored.length; i++) {
-
-      if (stored[i] == element) {
-        stored[i].classList.toggle('open');
-      } else {
-        stored[i].classList.remove('open');
-      }
+    if (varType[a] == element) {
+      varType[a].classList.toggle('open');
+    } else {
+      varType[a].classList.remove('open');
     }
   }
+}
+
+function toggling() {
+  console.log("Creating something" + " awesome");
+
+  var stored = document.querySelectorAll('.stored');
+  var closed = document.querySelectorAll('.closed');
+
+  for (b = 0; b < stored.length; b++) {
+    stored[b].addEventListener('click', function onclick(event) {
+      console.log("Clicky!");
+      toggle(this, stored);
+    });
+  }
+
+  for (c = 0; c < closed.length; c++) {
+    closed[c].addEventListener('click', function onclick(event) {
+      console.log("Click me!");
+      toggle(this, closed);
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+  toggling();
 });

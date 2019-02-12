@@ -234,3 +234,16 @@
 #izzyPokemonPC .stored:not(.open) .hiddenInfo {
 	display: none;
 }
+
+#izzyPokemonPC pokeslot.closed {
+	grid-row: span 1;
+	cursor: pointer;
+}
+
+#izzyPokemonPC .closed.open {
+	grid-row: var(--fullCard);
+}
+
+#izzyPokemonPC .closed:not(.open) .hiddenInfo {
+	display: none;
+}

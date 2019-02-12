@@ -116,4 +116,6 @@ function submitForm() {
   preview.innerHTML = "<div id='izzyPokemonPC'>"+code+"</div>";
 
   output.innerHTML = code;
+
+  toggling();
 }
