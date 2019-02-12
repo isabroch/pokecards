@@ -81,7 +81,7 @@ function submitForm() {
 <pokeSprites>
 <pokeImg><img src="https://play.pokemonshowdown.com/sprites/xyani/` + species.toLowerCase() + `.gif" alt="` + species + `" title="` + species + `"></pokeImg>
 <pokeBall class="` + ballHidden + `"><img src="http://pokemonpledge.b1.jcink.com/uploads/pokemonpledge/Shop_Icons/Pokeballs/` + ball.toLowerCase().replace(/ /g, "") + `.png" alt="` + ball + `" title="` + ball + `"></pokeBall>
-<pokeItem  class="` + ballHidden + `"><img src="http://pokemonpledge.b1.jcink.com/uploads/pokemonpledge/Shop_Icons/Held_Items/` + item.toLowerCase().replace(/ /g, "_") + `.png" alt="` + item + `" title="` + item + `"></pokeItem>
+<pokeItem  class="` + itemHidden + `"><img src="http://pokemonpledge.b1.jcink.com/uploads/pokemonpledge/Shop_Icons/Held_Items/` + item.toLowerCase().replace(/ /g, "_") + `.png" alt="` + item + `" title="` + item + `"></pokeItem>
 </pokeSprites>
 
 <pokeInfo>
