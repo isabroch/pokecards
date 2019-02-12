@@ -28,7 +28,7 @@ function populateForm(array, form, type) {
   for (var i = 0; i < array.length; i++) {
     if (type == true) {
     form[form.length] = new Option(array[i], array[i]); } else {
-    form[form.length] = new Option(array[i][1], array[i][2]);
+    form[form.length] = new Option(array[i][0], array[i][1]);
     }
   }
 }
