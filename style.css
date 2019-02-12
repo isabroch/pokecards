@@ -19,6 +19,7 @@
 	padding: 6px 10px 10px;
 	border-radius: 5px;
 	position: relative;
+	font-size: 13px;
 }
 
 #izzyPokemonPC pokeslot:not(.stored) {
