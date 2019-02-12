@@ -65,7 +65,7 @@ function submitForm() {
 
   var ball = document.getElementById("ball").value;
   var ballHidden = hideEmpty(ball, "No Ball", "hideMe");
-  var item = document.getElementById("item").text;
+  var item = document.querySelector('#item option:checked').text;
   var itemImg = document.getElementById("item").value;
   var itemHidden = hideEmpty(item, "No Item", "hideMe");
 
