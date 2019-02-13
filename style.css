@@ -9,7 +9,7 @@
 	grid-auto-rows: 110px;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 550px) {
 	#izzyPokemonPC { 
 		grid-template-columns: repeat(2, 1fr); 
 	}
