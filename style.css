@@ -20,6 +20,7 @@
 	border-radius: 5px;
 	position: relative;
 	font-size: 13px;
+	border-left: 10px solid var(--borderColor);
 }
 
 #izzyPokemonPC pokeslot:not(.stored) {
