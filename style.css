@@ -221,7 +221,7 @@
 	background: white;
 	border-radius: 5px;
 	margin: 2px 0;
-	overflow-y: auto;
+	overflow-y: scroll;
 	overflow-x: hidden;
 	padding: 8px;
 	white-space: pre-line;
