@@ -78,9 +78,9 @@ function submitForm() {
   var description = document.getElementById("description").value;
 
   var storing = document.getElementById("stored").checked;
-  var storedAway = hideEmpty(storing, true, "stored", " ");
+  var storedAway = hideEmpty(storing, true, "stored", "closed open");
 
-  var code = `<pokeSlot class="`+ storedAway +`">
+  var code = `<pokeSlot class="`+ storedAway +`" id="card_`+ name.toLowerCase() +`">
 <pokeSprites>
 <pokeImg><img src="https://play.pokemonshowdown.com/sprites/xyani/` + species.toLowerCase() + `.gif" alt="` + species + `" title="` + species + `"></pokeImg>
 <pokeBall class="` + ballHidden + `"><img src="http://pokemonpledge.b1.jcink.com/uploads/pokemonpledge/Shop_Icons/Pokeballs/` + ball.toLowerCase().replace(/ /g, "") + `.png" alt="` + ball + `" title="` + ball + `"></pokeBall>
