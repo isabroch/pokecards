@@ -40,7 +40,7 @@ function toggling() {
   for (c = 0; c < closed.length; c++) {
     closed[c].addEventListener('click', function onclick(event) {
       console.log("Click me!");
-      toggle(this, closed);
+      this.classList.toggle('open');
     });
   }
 }
