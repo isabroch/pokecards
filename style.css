@@ -231,7 +231,6 @@
 	--color: rgb(75,75,75);
 	grid-row: span 1;
 	background: var(--color);
-	cursor: pointer;
 }
 
 #izzyPokemonPC .stored.open {
@@ -244,7 +243,6 @@
 
 #izzyPokemonPC pokeslot.closed {
 	grid-row: span 1;
-	cursor: pointer;
 }
 
 #izzyPokemonPC .closed.open {
