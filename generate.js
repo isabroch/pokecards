@@ -89,18 +89,18 @@ function submitForm() {
 
 <pokeInfo>
 <pokeName><span>` + name + `</span></pokeName>
-<pokeSub><span>` + gender + ` - ` + species + `</span></pokeSub>
+<pokeSub><span>` + gender + ` - <a href="https://bulbapedia.bulbagarden.net/wiki/` + species + `" target="_blank">` + species + `</a></span></pokeSub>
 <pokeLink><span>LVL` + lvl + ` - Link ` + link + `%</span></pokeLink>
 </pokeInfo>
 
 <div class="hiddenInfo">
 <pokeStats>
 <pokeType> ` + types + `</pokeType>
-<a href="https://bulbapedia.bulbagarden.net/wiki/` + ability + `_(Ability)" class="pokeAbility">` + ability + `</a>
-<a href="https://bulbapedia.bulbagarden.net/wiki/` + move1 + `_(move)" class="pokeMove ` + moveType1 + `">` + move1 + `</a>
-<a href="https://bulbapedia.bulbagarden.net/wiki/` + move2 + `_(move)" class="pokeMove ` + moveType2 + `">` + move2 + `</a>
-<a href="https://bulbapedia.bulbagarden.net/wiki/` + move3 + `_(move)" class="pokeMove ` + moveType3 + `">` + move3 + `</a>
-<a href="https://bulbapedia.bulbagarden.net/wiki/` + move4 + `_(move)" class="pokeMove ` + moveType4 + `">` + move4 + `</a>
+<a href="https://bulbapedia.bulbagarden.net/wiki/` + ability + `_(Ability)" target="_blank" class="pokeAbility">` + ability + `</a>
+<a href="https://bulbapedia.bulbagarden.net/wiki/` + move1 + `_(move)" target="_blank" class="pokeMove ` + moveType1 + `">` + move1 + `</a>
+<a href="https://bulbapedia.bulbagarden.net/wiki/` + move2 + `_(move)" target="_blank" class="pokeMove ` + moveType2 + `">` + move2 + `</a>
+<a href="https://bulbapedia.bulbagarden.net/wiki/` + move3 + `_(move)" target="_blank" class="pokeMove ` + moveType3 + `">` + move3 + `</a>
+<a href="https://bulbapedia.bulbagarden.net/wiki/` + move4 + `_(move)" target="_blank" class="pokeMove ` + moveType4 + `">` + move4 + `</a>
 </pokeStats>
 
 <pokeDescription>` + description + `</pokeDescription>
